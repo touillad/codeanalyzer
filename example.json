@@ -1,0 +1,295 @@
+{
+   "width" : 47,
+   "children" : [
+      {
+         "children" : [
+            {
+               "url" : "https://github.com/touillad/codeanalyzer/tree/master/utils",
+               "type" : "PACKAGE",
+               "numberOfMethods" : 0,
+               "depth" : 3,
+               "numberOfAttributes" : 0,
+               "name" : "utils",
+               "numberOfLines" : 0,
+               "position" : {
+                  "x" : -21,
+                  "y" : -12
+               },
+               "width" : 3,
+               "children" : [
+                  {
+                     "name" : "utils.go",
+                     "numberOfAttributes" : 1,
+                     "depth" : 2,
+                     "position" : {
+                        "y" : 0,
+                        "x" : 0
+                     },
+                     "numberOfLines" : 25,
+                     "type" : "FILE",
+                     "url" : "https://github.com/touillad/codeanalyzer/blob/master/utils/utils.go",
+                     "numberOfMethods" : 4,
+                     "children" : null,
+                     "width" : 2
+                  }
+               ]
+            },
+            {
+               "width" : 34,
+               "children" : [
+                  {
+                     "width" : 2,
+                     "children" : [
+                        {
+                           "position" : {
+                              "x" : 0,
+                              "y" : 0
+                           },
+                           "numberOfLines" : 17,
+                           "name" : "byWidth",
+                           "numberOfAttributes" : 0,
+                           "depth" : 1,
+                           "numberOfMethods" : 3,
+                           "type" : "STRUCT",
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/sort.go#L0",
+                           "children" : null,
+                           "width" : 1
+                        }
+                     ],
+                     "numberOfMethods" : 0,
+                     "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/sort.go",
+                     "type" : "FILE",
+                     "numberOfLines" : 0,
+                     "position" : {
+                        "y" : -9,
+                        "x" : -15.5
+                     },
+                     "depth" : 2,
+                     "name" : "sort.go",
+                     "numberOfAttributes" : 0
+                  },
+                  {
+                     "width" : 12,
+                     "children" : [
+                        {
+                           "numberOfLines" : 40,
+                           "position" : {
+                              "x" : 0,
+                              "y" : -2
+                           },
+                           "depth" : 10,
+                           "name" : "generator",
+                           "numberOfAttributes" : 9,
+                           "numberOfMethods" : 2,
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/position.go#L14",
+                           "type" : "STRUCT",
+                           "children" : null,
+                           "width" : 10
+                        },
+                        {
+                           "numberOfLines" : 4,
+                           "position" : {
+                              "x" : -3.5,
+                              "y" : 5.5
+                           },
+                           "depth" : 3,
+                           "name" : "Position",
+                           "numberOfAttributes" : 2,
+                           "numberOfMethods" : 0,
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/position.go#L7",
+                           "type" : "STRUCT",
+                           "children" : null,
+                           "width" : 3
+                        }
+                     ],
+                     "type" : "FILE",
+                     "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/position.go",
+                     "numberOfMethods" : 1,
+                     "numberOfAttributes" : 1,
+                     "name" : "position.go",
+                     "depth" : 16,
+                     "position" : {
+                        "x" : -10.5,
+                        "y" : 1
+                     },
+                     "numberOfLines" : 8
+                  },
+                  {
+                     "width" : 20,
+                     "children" : [
+                        {
+                           "width" : 13,
+                           "children" : null,
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/node.go#L20",
+                           "type" : "STRUCT",
+                           "numberOfMethods" : 3,
+                           "depth" : 13,
+                           "numberOfAttributes" : 12,
+                           "name" : "Node",
+                           "numberOfLines" : 65,
+                           "position" : {
+                              "x" : 0,
+                              "y" : 0
+                           }
+                        }
+                     ],
+                     "numberOfMethods" : 3,
+                     "type" : "FILE",
+                     "url" : "https://github.com/touillad/codeanalyzer/blob/master/model/node.go",
+                     "position" : {
+                        "x" : 6.5,
+                        "y" : 0
+                     },
+                     "numberOfLines" : 92,
+                     "numberOfAttributes" : 6,
+                     "name" : "node.go",
+                     "depth" : 20
+                  }
+               ],
+               "numberOfMethods" : 0,
+               "url" : "https://github.com/touillad/codeanalyzer/tree/master/model",
+               "type" : "PACKAGE",
+               "numberOfLines" : 0,
+               "position" : {
+                  "y" : 1,
+                  "x" : -5.5
+               },
+               "depth" : 21,
+               "numberOfAttributes" : 0,
+               "name" : "model"
+            },
+            {
+               "numberOfMethods" : 1,
+               "url" : "https://github.com/touillad/codeanalyzer/blob/master/main.go",
+               "type" : "FILE",
+               "numberOfLines" : 24,
+               "position" : {
+                  "x" : -22,
+                  "y" : 13
+               },
+               "depth" : 1,
+               "name" : "main.go",
+               "numberOfAttributes" : 0,
+               "width" : 1,
+               "children" : null
+            },
+            {
+               "children" : [
+                  {
+                     "depth" : 15,
+                     "numberOfAttributes" : 1,
+                     "name" : "visitor.go",
+                     "numberOfLines" : 0,
+                     "position" : {
+                        "x" : 0,
+                        "y" : -2.5
+                     },
+                     "url" : "https://github.com/touillad/codeanalyzer/blob/master/analyzer/visitor.go",
+                     "type" : "FILE",
+                     "numberOfMethods" : 0,
+                     "children" : [
+                        {
+                           "children" : null,
+                           "width" : 5,
+                           "position" : {
+                              "x" : -1,
+                              "y" : -4
+                           },
+                           "numberOfLines" : 68,
+                           "name" : "Visitor",
+                           "numberOfAttributes" : 4,
+                           "depth" : 5,
+                           "numberOfMethods" : 2,
+                           "type" : "STRUCT",
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/analyzer/visitor.go#L19"
+                        },
+                        {
+                           "numberOfMethods" : 0,
+                           "type" : "STRUCT",
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/analyzer/visitor.go#L10",
+                           "position" : {
+                              "y" : 3,
+                              "x" : 0
+                           },
+                           "numberOfLines" : 8,
+                           "numberOfAttributes" : 6,
+                           "name" : "NodeInfo",
+                           "depth" : 7,
+                           "width" : 7,
+                           "children" : null
+                        }
+                     ],
+                     "width" : 9
+                  },
+                  {
+                     "width" : 4,
+                     "children" : [
+                        {
+                           "width" : 3,
+                           "children" : null,
+                           "numberOfMethods" : 2,
+                           "type" : "STRUCT",
+                           "url" : "https://github.com/touillad/codeanalyzer/blob/master/analyzer/analyzer.go#L20",
+                           "position" : {
+                              "y" : 0,
+                              "x" : 0
+                           },
+                           "numberOfLines" : 49,
+                           "name" : "analyzer",
+                           "numberOfAttributes" : 2,
+                           "depth" : 3
+                        }
+                     ],
+                     "numberOfMethods" : 2,
+                     "type" : "FILE",
+                     "url" : "https://github.com/touillad/codeanalyzer/blob/master/analyzer/analyzer.go",
+                     "position" : {
+                        "x" : -2.5,
+                        "y" : 8
+                     },
+                     "numberOfLines" : 16,
+                     "numberOfAttributes" : 0,
+                     "name" : "analyzer.go",
+                     "depth" : 4
+                  }
+               ],
+               "width" : 10,
+               "numberOfLines" : 0,
+               "position" : {
+                  "y" : -3,
+                  "x" : 17.5
+               },
+               "depth" : 21,
+               "numberOfAttributes" : 0,
+               "name" : "analyzer",
+               "numberOfMethods" : 0,
+               "url" : "https://github.com/touillad/codeanalyzer/tree/master/analyzer",
+               "type" : "PACKAGE"
+            }
+         ],
+         "width" : 46,
+         "numberOfAttributes" : 0,
+         "name" : "",
+         "depth" : 28,
+         "position" : {
+            "x" : 0,
+            "y" : 0
+         },
+         "numberOfLines" : 0,
+         "type" : "PACKAGE",
+         "url" : "https://github.com/touillad/codeanalyzer/tree/master",
+         "numberOfMethods" : 0
+      }
+   ],
+   "numberOfMethods" : 0,
+   "url" : "",
+   "type" : "",
+   "numberOfLines" : 0,
+   "position" : {
+      "y" : 0,
+      "x" : 0
+   },
+   "depth" : 29,
+   "numberOfAttributes" : 0,
+   "name" : "github.com/touillad/codeanalyzer"
+}

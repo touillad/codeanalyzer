@@ -1,0 +1,96 @@
+{
+   "type" : "",
+   "name" : "github.com/touillad/codeanalyzer",
+   "children" : [
+      {
+         "type" : "PACKAGE",
+         "name" : "",
+         "children" : [
+            {
+               "type" : "FILE",
+               "name" : "main.go"
+            },
+            {
+               "type" : "PACKAGE",
+               "name" : "utils",
+               "children" : [
+                  {
+                     "type" : "FILE",
+                     "name" : "utils.go"
+                  }
+               ]
+            },
+            { 
+               "type" : "PACKAGE",
+               "name" : "model",
+               "children" : [
+                  {
+                     "type" : "FILE",
+                     "name" : "sort.go",
+                     "children" : [
+                        {
+                           "name" : "byWidth",
+                           "type" : "STRUCT"
+                        }
+                     ]
+                  },
+                  {
+                     "type" : "FILE",
+                     "name" : "position.go",
+                     "children" : [
+                        {
+                           "name" : "generator",
+                           "type" : "STRUCT"
+                        },
+                        {
+                           "name" : "Position",
+                           "type" : "STRUCT"
+                        }
+                     ]
+                  },
+                  {
+                     "type" : "FILE",
+                     "name" : "node.go",
+                     "children" : [
+                        {
+                           "type" : "STRUCT",
+                           "name" : "Node"
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "type" : "PACKAGE",
+               "name" : "analyzer",
+               "children" : [
+                  {
+                     "type" : "FILE",
+                     "name" : "visitor.go",
+                     "children" : [
+                        {
+                           "name" : "Visitor",
+                           "type" : "STRUCT"
+                        },
+                        {
+                           "type" : "STRUCT",
+                           "name" : "NodeInfo"
+                        }
+                     ]
+                  },
+                  {
+                     "type" : "FILE",
+                     "name" : "analyzer.go",
+                     "children" : [
+                        {
+                           "type" : "STRUCT",
+                           "name" : "analyzer"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
