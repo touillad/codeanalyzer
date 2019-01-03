@@ -101,18 +101,24 @@ func (n *Node) GenerateChildrenPosition() {
 	}
 }
 
-func generateStateByComponents(currentPackageName string, n *Node, stmtCount *int, components map[string]*Component) {
+func generateStateByComponents(rootPackageName, currentPackageName string, n *Node, stmtCount *int, components map[string]*Component) {
 	if n == nil {
 		return
 	}
 
 	if n.Type == PackageType {
-		currentPackageName = currentPackageName + "." + n.Name
+		if n.Name != "" {
+			if currentPackageName != "" {
+				currentPackageName = currentPackageName + "." + n.Name
+			} else {
+				currentPackageName = n.Name
+			}
+		}
 		_, ok := components[currentPackageName]
 		if !ok {
 			components[currentPackageName] = &Component{
 				name:      currentPackageName,
-				isRoot:    currentPackageName == "",
+				isRoot:    currentPackageName == rootPackageName,
 				nbMethods: n.NumberOfMethods,
 				nbFiles:   0,
 			}
@@ -131,7 +137,7 @@ func generateStateByComponents(currentPackageName string, n *Node, stmtCount *in
 
 	if len(n.Children) > 0 {
 		for _, child := range n.Children {
-			generateStateByComponents(currentPackageName, child, stmtCount, components)
+			generateStateByComponents(rootPackageName, currentPackageName, child, stmtCount, components)
 		}
 	}
 
@@ -210,10 +216,10 @@ func New(items map[string]*analyzer.NodeInfo, repositoryName string) *Node {
 	nbTotalComponents := 0
 	nbTotalStmts := 0
 	components := make(map[string]*Component)
-	packageName := ""
+	//packageName := ""
 	//tree.GenerateStats(packageName, &nbTotalComponents, &nbTotalMethods, components)
 
-	generateStateByComponents(packageName, tree, &nbTotalStmts, components)
+	generateStateByComponents(repositoryName, repositoryName, tree, &nbTotalStmts, components)
 	nbTotalComponents = len(components)
 
 	mean := float64(nbTotalStmts / nbTotalComponents)
@@ -228,27 +234,31 @@ func New(items map[string]*analyzer.NodeInfo, repositoryName string) *Node {
 	stdDev := float32(math.Sqrt((squareDiffSum / float64(nbTotalComponents))))
 
 	fmt.Printf("\nComponent Size Analysis\n")
+	fmt.Printf("Service Name: %s\n", repositoryName)
 	fmt.Printf("Total Statements: %d\n", nbTotalStmts)
 	fmt.Printf("Total Components: %d\n", nbTotalComponents)
 	fmt.Printf("Avg Statements Per Component: %.2f\n", mean)
 	fmt.Printf("Standard Deviation: %.2f\n", stdDev)
 	fmt.Println("")
-	fmt.Println("%    stmts  files  sdev  root   component")
+	fmt.Println("%      stmts  files   sdev  root  component")
 
 	for _, componentName := range keys {
 		//for componentName, component := range components {
 		component := components[componentName]
 		percentage := float32(component.nbStmts) / float32(nbTotalStmts) * 100
-		if percentage == 0 {
-			percentage = 1
-		}
+		//if percentage == 0 {
+		//	percentage = 1
+		//}
 		diffFromMean := math.Abs(float64(component.nbStmts) - mean)
+		if component.nbStmts == 0 {
+			diffFromMean = 0
+		}
 		numStdDev := diffFromMean / float64(stdDev)
 		root := " "
 		if component.isRoot {
 			root = "*"
 		}
-		fmt.Printf("%-6.2f", percentage)
+		fmt.Printf("%-8.2f", percentage)
 		fmt.Printf("%-8d", component.nbStmts)
 		fmt.Printf("%-6d", component.nbFiles)
 		fmt.Printf("%-6.2f", numStdDev)
